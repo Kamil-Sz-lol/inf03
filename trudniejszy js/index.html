@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var idzam = 0;
+        function braki(){
+            let a = document.getElementById('1').textContent;
+            if(a==0){
+                document.getElementById('1').style.backgroundColor="red";
+            }
+            if(a>=1 && a<=5){
+                document.getElementById('1').style.backgroundColor="yellow";
+            }
+            if(a>5){
+                document.getElementById('1').style.backgroundColor="white";
+            }
+            let b = document.getElementById('2').textContent;
+            if(b==0){
+                document.getElementById('2').style.backgroundColor="red";
+            }
+            if(b>=1 && b<=5){
+                document.getElementById('2').style.backgroundColor="yellow";
+            }
+            if(b>5){
+                document.getElementById('2').style.backgroundColor="white";
+            }
+            let c = document.getElementById('3').textContent;
+            if(c==0){
+                document.getElementById('3').style.backgroundColor="red";
+            }
+            if(c>=1 && c<=5){
+                document.getElementById('3').style.backgroundColor="yellow";
+            }
+            if(c>5){
+                document.getElementById('3').style.backgroundColor="white";
+            }
+            let d = document.getElementById('4').textContent;
+            if(d==0){
+                document.getElementById('4').style.backgroundColor="red";
+            }
+            if(d>=1 && d<=5){
+                document.getElementById('4').style.backgroundColor="yellow";
+            }
+            if(d>5){
+                document.getElementById('4').style.backgroundColor="white";
+            }
+            
+        }
+        function aktualizuj(x){
+           let nowa = prompt("podaj nową ilość");
+           document.getElementById(x).innerHTML = nowa;
+           braki();
+        }
+        function zamow(y){
+            idzam++;
+            let chuj = document.getElementById(y).textContent;
+            alert("zamówienie nr:"+idzam+" produkt:"+chuj);
+        }
+    </script>
+</head>
+<body onload="braki()">
+    <table border="1">
+        <tr>
+            <th>produkt</th>
+            <th>jednostka</th>
+            <th>dostepna ilosc</th>
+            <th>aktualizacja</th>
+            <th>zamówienie</th>
+        </tr>
+        <tr>
+            <td id="11">Skrętka U/UTP drut</td>
+            <td>metr</td>
+            <td id="1">20</td>
+            <td><button onclick="aktualizuj(1)">Aktualizuj</button></td>
+            <td><button onclick="zamow(11)">Zamów</button></td>
+        </tr>
+        <tr>
+            <td id="22">Skrętka U/UTP linka</td>
+            <td>metr</td>
+            <td id="2">2</td>
+            <td><button onclick="aktualizuj(2)">Aktualizuj</button></td>
+            <td><button onclick="zamow(22)">Zamów</button></td>
+        </tr>
+        <tr>
+            <td id="33">wtyki 8p8c</td>
+            <td>sztuki</td>
+            <td id="3">10</td>
+            <td><button onclick="aktualizuj(3)">Aktualizuj</button></td>
+            <td><button onclick="zamow(33)">Zamów</button></td>
+        </tr>
+        <tr>
+            <td id="44">moduły keystone</td>
+            <td>sztuki</td>
+            <td id="4">30</td>
+            <td><button onclick="aktualizuj(4)">Aktualizuj</button></td>
+            <td><button onclick="zamow(44)">Zamów</button></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

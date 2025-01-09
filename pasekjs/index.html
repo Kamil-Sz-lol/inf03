@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep-rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+    <script src="skrypt.js"></script>
+</head>
+<body>
+    <header>
+        <h1>zarejestruj sie w sklepie</h1>
+    </header>
+    <section class="boczny">
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdz promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </section>
+    <main>
+        <button onclick="aktywacja(1)">Klient</button>
+        <button onclick="aktywacja(2)">Adres</button>
+        <button onclick="aktywacja(3)">Kontakt</button>
+
+        <section class="blok1" id="1">
+            <p>Imię</p>
+            <input type="text" placeholder="Wpisz dane..." onfocusout="zwiekszpasek()">
+            <p>Nazwisko</p>
+            <input type="text">
+            <p>Data urodzenia</p>
+            <input type="date">
+        </section>
+
+        <section class="blok2" id="2">
+            <p>Ulica</p>
+            <input type="text">
+            <p>Numer</p>
+            <input type="number">
+            <p>Miasto</p>
+            <input type="text">
+        </section>
+
+        <section class="blok3" id="3">
+            <p>Numer komórkowy</p>
+            <input type="tel">
+            <input type="checkbox" name="rodo"><label for="rodo">Akceptuje RODO</label>
+            <button onclick="zatwierdz()">Zatwierdz dane</button>
+        </section>
+
+    </main>
+    <section class="pasek">
+        <section id="pasekpost"></section>
+    </section>
+    <footer>
+        <h4>rejestracje do sklepu wykonał: dasjdjkashdjk</h4>
+        <button onclick="zwiekszpasek()">sss</button>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>efekty na obrazach</h1>
+    </header>
+    <section class="lewyg">
+        <img src="pszczola.jpg" alt="pszczola na fioletowym kwiatku" id="obraz1"><br>
+        <input type="radio" name="bee" id="blur">blur<br>
+        <input type="radio" name="bee" id="sepia">sepia<br>
+        <input type="radio" name="bee" id="negatyw">negatyw<br>
+        <button onclick="pszczola()">zastosuj</button>
+
+    </section>
+    <section class="prawyg">
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="obraz2"><br>
+        <button onclick="kolor()">kolorowy</button>
+        <button onclick="czarnobialy()">czarno-biały</button>
+    </section>
+    <section class="lewyd">
+        <img src="owoce.jpg" alt="kosz pelen owocow" id="obraz3"><br>
+        <input type="range" min="0" max="100" value="100" id="suwak1"><br>
+        <button onclick="przezro()">zastosuj</button>
+    </section>
+    <section class="prawyd">
+        <img src="zolw.jpg" alt="żółw w wodzie" id="obraz4"><br>
+        <input type="range" min="0" max="250" id="suwak2"><br>
+        <button onclick="jasnosc()">zastosuj</button>
+    </section>
+    <footer>
+        <p><a href="http://www.css.com/">Zobacz inne efekty obrazu</a></p>
+        <p>strone wykonał: 38913981</p>
+    </footer>
+    
+
+</body>
+</html>
